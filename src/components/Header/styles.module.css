@@ -1,0 +1,9 @@
+.container{
+  height: 90px;
+  background-color: #333;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 28px;
+}

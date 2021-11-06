@@ -3,7 +3,7 @@ import Link from "next/link";
 import styles from "../styles/Home.module.css";
 import { request } from "../lib/datocms";
 import { Image } from "react-datocms";
-
+import Header from "../src/components/Header";
 const HOMEPAGE_QUERY = `
 query MyQuery {
   allArticles {
@@ -51,12 +51,14 @@ export default function Home(props) {
   const posts = data.allArticles;
   console.log(data);
   return (
-    <div className={styles.container}>
+      <>
+      <Header />
+      <div className={styles.container}>
       <Head>
-        <title>Cooking with Tuomo</title>
+        <title>Duofront</title>
       </Head>
       <div>
-        <h1>Cooking w/ Tuomo</h1>
+        <h1 className={styles.titulo}>DuoBlog melhores assuntos :P</h1>
       </div>
       <div>
         {posts.map((p) => (
@@ -64,6 +66,7 @@ export default function Home(props) {
         ))}
       </div>
     </div>
+    </>
   );
 }
 
