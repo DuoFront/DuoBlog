@@ -11,7 +11,7 @@ export const BlogPostPreview = (props) => {
       <div className={styles.tecnologiaContainer}>
       {data.tecnology &&
         data.tecnology.map((tecnologia) =>{
-          return <Image data={tecnologia.responsiveImage} className={styles.tecnologiaImage}alt=""/>
+          return <Image data={tecnologia.responsiveImage} className={styles.tecnologiaImage}alt="" key={Math.random()}/>
         })
       }
       </div>
