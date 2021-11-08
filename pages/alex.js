@@ -3,7 +3,6 @@ import styles from "../styles/Home.module.css";
 import { request } from "../lib/datocms";
 import Header from "../src/components/Header";
 import { BlogPostPreview } from "../src/components/BlogPostPreview";
-import { Hero } from "../src/components/Hero";
 const HOMEPAGE_QUERY = `
 query MyQuery {
   allProjetoalexes {
@@ -49,7 +48,14 @@ export async function getStaticProps() {
 export default function Alex(props) {
   const { data } = props;
   const posts = data.allProjetoalexes;
-  console.log(data);
+  function ajustaData(dataa){
+    const dataNova = dataa.split("-").join('')
+    return dataNova;
+  }
+  posts.sort(function(a,b){
+    return ajustaData(a.publishDate) > ajustaData(b.publishDate)? -1
+    : ajustaData(a.publishDate) < ajustaData(b.publishDate)? 1: 0;
+  })
   return (
       <>
       <Head>

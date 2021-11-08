@@ -49,7 +49,14 @@ export async function getStaticProps() {
 export default function Home(props) {
   const { data } = props;
   const posts = data.allArticles;
-  console.log(data);
+  function ajustaData(dataa){
+    const dataNova = dataa.split("-").join('')
+    return dataNova;
+  }
+  posts.sort(function(a,b){
+    return ajustaData(a.publishDate) > ajustaData(b.publishDate)? -1
+    : ajustaData(a.publishDate) < ajustaData(b.publishDate)? 1: 0;
+  })
   return (
       <>
       <Head>
