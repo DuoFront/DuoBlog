@@ -1,9 +1,9 @@
 .container{
   height: 90px;
-  background-color: #333;
+  background-color: #171717;
   color: white;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 28px;
+  padding: 0 2rem;
 }

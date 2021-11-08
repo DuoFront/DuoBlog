@@ -1,0 +1,37 @@
+.container{
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  margin: 1.5%;
+  margin-bottom: 20px;
+  color: white;
+  
+}
+@media screen and (max-width: 780px) {
+  .container{
+    width: 48%;
+    margin: 1%;
+    margin-bottom: 20px;
+  }
+  .image{
+    height: unset;
+  }
+}
+@media screen and (max-width: 520px) {
+  .container{
+    width: 100%;
+    margin: 0;
+    margin-bottom: 20px;
+  }
+}
+.title{
+  color:#533DAD;
+  margin: 0 0;
+}
+.image{
+  height: 200px;
+}
+.data{
+  color: #666;
+  line-height: 2;
+}

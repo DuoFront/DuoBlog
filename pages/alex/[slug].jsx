@@ -1,13 +1,14 @@
+
 import { request } from "../../lib/datocms";
 import Header from "../../src/components/Header";
 import { BlogPostCorpo } from "../../src/components/BlogPostCorpo";
-import Head from "next/head";
+
 export default function BlogPost(props) {
   const { postData } = props;
   return (
     <>
     <Header/>
-    <BlogPostCorpo postData={postData} link="/"/>
+    <BlogPostCorpo postData={postData} link="/alex"/>
   </>
   );
 }
@@ -15,7 +16,7 @@ export default function BlogPost(props) {
 
 const PATHS_QUERY = `
 query MyQuery {
-  allArticles {
+  allProjetoalexes {
     slug
   }
 }
@@ -27,7 +28,7 @@ export const getStaticPaths = async () => {
   });
 
   let paths = [];
-  slugQuery.allArticles.map((p) => paths.push(`/blog/${p.slug}`));
+  slugQuery.allProjetoalexes.map((p) => paths.push(`/alex/${p.slug}`));
 
   return {
     paths,
@@ -36,7 +37,7 @@ export const getStaticPaths = async () => {
 };
 const ARTICLE_QUERY = `
 query MyQuery($slug: String) {
-  article(filter: {slug: {eq: $slug}}) {
+  projetoalex(filter: {slug: {eq: $slug}}) {
     author {
       name
     }
@@ -93,7 +94,7 @@ export const getStaticProps = async ({ params }) => {
   });
   return {
     props: {
-      postData: post.article,
+      postData: post.projetoalex,
     },
   };
 };

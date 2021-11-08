@@ -5,8 +5,23 @@
   flex-direction: column;
   justify-content: top;
   align-items: center;
-  height: 100vh;
+  flex:1;
 }
 .titulo{
+  padding-left: 2rem;
   margin-bottom: 40px;
+  color: white;
+}
+@media screen and (max-width:680px){
+  .titulo{
+    padding-left: .5rem;
+  }
+}
+.main{
+  display: flex;
+  background-color: #171717;
+}
+.postContainer {
+  display: flex;
+  flex-wrap: wrap;
 }

@@ -6,7 +6,7 @@ import { BlogPostPreview } from "../src/components/BlogPostPreview";
 import { Hero } from "../src/components/Hero";
 const HOMEPAGE_QUERY = `
 query MyQuery {
-  allArticles {
+  allProjetoalexes {
     title
     author {
       name
@@ -46,25 +46,24 @@ export async function getStaticProps() {
   };
 }
 
-export default function Home(props) {
+export default function Alex(props) {
   const { data } = props;
-  const posts = data.allArticles;
+  const posts = data.allProjetoalexes;
   console.log(data);
   return (
       <>
       <Head>
-        <title>Duofront</title>
+        <title>DuoBlog Alex</title>
       </Head>
       <Header />
       <main className={styles.main}>
       <div className={styles.container}>
       <div>
-        <Hero/>
-        <h1 className={styles.titulo}>DuoBlog melhores assuntos :P</h1>
+        <h1 className={styles.titulo}>Alex</h1>
       </div>
       <div className={styles.postContainer}>
         {posts.map((p) => (
-          <BlogPostPreview key={p.id} data={p} link="/blog/"/>
+          <BlogPostPreview key={p.id} data={p} link="/alex/"/>
           ))}
       </div>
     </div>
@@ -72,4 +71,3 @@ export default function Home(props) {
     </>
   );
 }
-
