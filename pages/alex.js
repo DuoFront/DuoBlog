@@ -7,9 +7,6 @@ const HOMEPAGE_QUERY = `
 query MyQuery {
   allProjetoalexes {
     title
-    author {
-      name
-    }
     content {
       value
     }
@@ -32,8 +29,27 @@ query MyQuery {
     id
     publishDate
     slug
+    author {
+      name
+    }
+    tecnology {
+      responsiveImage {
+        width
+        webpSrcSet
+        title
+        srcSet
+        src
+        sizes
+        height
+        bgColor
+        base64
+        aspectRatio
+        alt
+      }
+    }
   }
 }
+
 `;
 
 export async function getStaticProps() {
@@ -56,6 +72,7 @@ export default function Alex(props) {
     return ajustaData(a.publishDate) > ajustaData(b.publishDate)? -1
     : ajustaData(a.publishDate) < ajustaData(b.publishDate)? 1: 0;
   })
+  console.log(posts)
   return (
       <>
       <Head>

@@ -7,6 +7,13 @@
   color: white;
   
 }
+.tecnologiaContainer{
+  display: flex;
+}
+.tecnologiaImage{
+  width: 30px;
+  height: 30px;
+}
 @media screen and (max-width: 780px) {
   .container{
     width: 48%;
@@ -34,4 +41,8 @@
 .data{
   color: #666;
   line-height: 2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 6px 0;
 }
