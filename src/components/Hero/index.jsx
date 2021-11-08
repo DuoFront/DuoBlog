@@ -7,7 +7,7 @@ export function Hero(){
   return (
     <div className={styles.container}>
       <div className={styles.imageContainer}>
-      <Image src={image} className={styles.image}/>
+      <Image src={image} className={styles.image} alt="hero"/>
       </div>
       <div className={styles.texto}>
         <p className={styles.title}>Blog oficial da Duofront, onde serão postados atualizações de tecnologia, sei la</p>
