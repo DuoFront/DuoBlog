@@ -13,7 +13,7 @@ export function Hero(){
         <p className={styles.title}>Blog oficial da Duofront, onde serão postados atualizações de tecnologia, sei la</p>
         <p className={styles.criadores}>Saiba mais sobre os Criadores da Duo</p>
         <div className={styles.flex}>
-        <Link href="/alex">Alex Sant'Anna</Link>
+        <Link href="/alex">Alex Sant&apos;Anna</Link>
         <Link href="/">Paola Guedes</Link>
         </div>
       </div>

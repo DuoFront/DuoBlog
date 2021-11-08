@@ -6,7 +6,7 @@ export const BlogPostPreview = (props) => {
   const { data, link } = props;
   return (
     <div className={styles.container}>
-      <Link href={`${link}${data.slug}`}><a><Image data={data.coverImage.responsiveImage} className={styles.image}/> </a></Link>
+      <Link href={`${link}${data.slug}`}><a><Image data={data.coverImage.responsiveImage} className={styles.image} alt=""/> </a></Link>
       <div className={styles.data}>{data.publishDate}</div>
       <h2 className={styles.title}>
         <Link href={`${link}${data.slug}`}>
